@@ -127,7 +127,7 @@ export const SlackIcon = ({ count = 637 }: SlackIconProps) => {
 
       {/* Message */}
       {count > -1 && (
-        <div className="text-xl font-semibold text-white bg-gray-800/80 px-6 py-3 rounded-sm backdrop-blur-sm">
+        <div className="text-xl text-center font-semibold text-white bg-gray-800/80 px-6 py-3 rounded-md backdrop-blur-sm">
           {getNotificationMessage(count)}
         </div>
       )}
@@ -135,7 +135,7 @@ export const SlackIcon = ({ count = 637 }: SlackIconProps) => {
       {/* Next Threshold Link */}
       <a
         href={`?count=${nextCount + 1}`}
-        className="mt-50 px-8 py-5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-200"
+        className="mt-50 px-5 py-5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-200 text-center"
       >
         {`-> Click to feed the notifications! 🍔 <-`}
       </a>
