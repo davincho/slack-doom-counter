@@ -1,10 +1,10 @@
 import { SlackIcon } from "./components/SlackIcon";
 
-interface PageProps {
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-export default async function Home({ searchParams }: PageProps) {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
   const { count } = await searchParams;
 
   const parsedCount = count ? parseInt(count as string) : undefined;
